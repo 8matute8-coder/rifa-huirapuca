@@ -1,17 +1,25 @@
 {
-  "sellers": [],
+  "sellers": [
+    {
+      "id": "1785974048668",
+      "name": "Perez V",
+      "category": "m15"
+    }
+  ],
   "tickets": [
     {
       "num": 1,
-      "sellerId": "",
-      "buyer": "Carlos Gómez",
-      "phone": "3865441122",
-      "status": "Vendido",
-      "payment": "Pagado"
+      "sellerId": "1785974048668",
+      "player": "pedro",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
     },
     {
       "num": 2,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -19,7 +27,8 @@
     },
     {
       "num": 3,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -27,7 +36,8 @@
     },
     {
       "num": 4,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -35,7 +45,8 @@
     },
     {
       "num": 5,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -43,7 +54,8 @@
     },
     {
       "num": 6,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -51,7 +63,8 @@
     },
     {
       "num": 7,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -59,7 +72,8 @@
     },
     {
       "num": 8,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -67,7 +81,8 @@
     },
     {
       "num": 9,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -75,7 +90,8 @@
     },
     {
       "num": 10,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -83,7 +99,8 @@
     },
     {
       "num": 11,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -91,7 +108,8 @@
     },
     {
       "num": 12,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -99,7 +117,8 @@
     },
     {
       "num": 13,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -107,7 +126,8 @@
     },
     {
       "num": 14,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -115,7 +135,8 @@
     },
     {
       "num": 15,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -123,7 +144,8 @@
     },
     {
       "num": 16,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -131,7 +153,8 @@
     },
     {
       "num": 17,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -139,7 +162,8 @@
     },
     {
       "num": 18,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -147,7 +171,8 @@
     },
     {
       "num": 19,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -155,7 +180,8 @@
     },
     {
       "num": 20,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -163,7 +189,8 @@
     },
     {
       "num": 21,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -171,7 +198,8 @@
     },
     {
       "num": 22,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -179,7 +207,8 @@
     },
     {
       "num": 23,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -187,7 +216,8 @@
     },
     {
       "num": 24,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -195,15 +225,17 @@
     },
     {
       "num": 25,
-      "sellerId": "",
-      "buyer": "Mariana Silva",
-      "phone": "3865998877",
-      "status": "Vendido",
-      "payment": "Pagado"
+      "sellerId": "1785974048668",
+      "player": "pedro",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
     },
     {
       "num": 26,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -211,7 +243,8 @@
     },
     {
       "num": 27,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -219,7 +252,8 @@
     },
     {
       "num": 28,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -227,7 +261,8 @@
     },
     {
       "num": 29,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -235,7 +270,8 @@
     },
     {
       "num": 30,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -243,7 +279,8 @@
     },
     {
       "num": 31,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -251,7 +288,8 @@
     },
     {
       "num": 32,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "pedro",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -259,7 +297,8 @@
     },
     {
       "num": 33,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -267,7 +306,8 @@
     },
     {
       "num": 34,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -275,7 +315,8 @@
     },
     {
       "num": 35,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -283,7 +324,8 @@
     },
     {
       "num": 36,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -291,7 +333,8 @@
     },
     {
       "num": 37,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -299,7 +342,8 @@
     },
     {
       "num": 38,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -307,7 +351,8 @@
     },
     {
       "num": 39,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -315,7 +360,8 @@
     },
     {
       "num": 40,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -323,7 +369,8 @@
     },
     {
       "num": 41,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -331,7 +378,8 @@
     },
     {
       "num": 42,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -339,7 +387,8 @@
     },
     {
       "num": 43,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -347,7 +396,8 @@
     },
     {
       "num": 44,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -355,7 +405,8 @@
     },
     {
       "num": 45,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -363,7 +414,8 @@
     },
     {
       "num": 46,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -371,7 +423,8 @@
     },
     {
       "num": 47,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -379,7 +432,8 @@
     },
     {
       "num": 48,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -387,7 +441,8 @@
     },
     {
       "num": 49,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -395,7 +450,8 @@
     },
     {
       "num": 50,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -403,7 +459,8 @@
     },
     {
       "num": 51,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -411,7 +468,8 @@
     },
     {
       "num": 52,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -419,7 +477,8 @@
     },
     {
       "num": 53,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -427,7 +486,8 @@
     },
     {
       "num": 54,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -435,7 +495,8 @@
     },
     {
       "num": 55,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -443,7 +504,8 @@
     },
     {
       "num": 56,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -451,7 +513,8 @@
     },
     {
       "num": 57,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -459,7 +522,8 @@
     },
     {
       "num": 58,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -467,7 +531,8 @@
     },
     {
       "num": 59,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -475,7 +540,8 @@
     },
     {
       "num": 60,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -483,7 +549,8 @@
     },
     {
       "num": 61,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -491,7 +558,8 @@
     },
     {
       "num": 62,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -499,7 +567,8 @@
     },
     {
       "num": 63,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -507,7 +576,8 @@
     },
     {
       "num": 64,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -515,7 +585,8 @@
     },
     {
       "num": 65,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -523,7 +594,8 @@
     },
     {
       "num": 66,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -531,7 +603,8 @@
     },
     {
       "num": 67,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -539,7 +612,8 @@
     },
     {
       "num": 68,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -547,7 +621,8 @@
     },
     {
       "num": 69,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -555,7 +630,8 @@
     },
     {
       "num": 70,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -563,7 +639,8 @@
     },
     {
       "num": 71,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -571,7 +648,8 @@
     },
     {
       "num": 72,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -579,7 +657,8 @@
     },
     {
       "num": 73,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -587,7 +666,8 @@
     },
     {
       "num": 74,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -595,7 +675,8 @@
     },
     {
       "num": 75,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -603,7 +684,8 @@
     },
     {
       "num": 76,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -611,7 +693,8 @@
     },
     {
       "num": 77,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -619,7 +702,8 @@
     },
     {
       "num": 78,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -627,7 +711,8 @@
     },
     {
       "num": 79,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -635,7 +720,8 @@
     },
     {
       "num": 80,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -643,7 +729,8 @@
     },
     {
       "num": 81,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -651,7 +738,8 @@
     },
     {
       "num": 82,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -659,7 +747,8 @@
     },
     {
       "num": 83,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -667,7 +756,8 @@
     },
     {
       "num": 84,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -675,7 +765,8 @@
     },
     {
       "num": 85,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -683,7 +774,8 @@
     },
     {
       "num": 86,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -691,7 +783,8 @@
     },
     {
       "num": 87,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -699,7 +792,8 @@
     },
     {
       "num": 88,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -707,7 +801,8 @@
     },
     {
       "num": 89,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -715,7 +810,8 @@
     },
     {
       "num": 90,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -723,7 +819,8 @@
     },
     {
       "num": 91,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -731,7 +828,8 @@
     },
     {
       "num": 92,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -739,7 +837,8 @@
     },
     {
       "num": 93,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -747,7 +846,8 @@
     },
     {
       "num": 94,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -755,7 +855,8 @@
     },
     {
       "num": 95,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -763,7 +864,8 @@
     },
     {
       "num": 96,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -771,7 +873,8 @@
     },
     {
       "num": 97,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -779,7 +882,8 @@
     },
     {
       "num": 98,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -787,7 +891,8 @@
     },
     {
       "num": 99,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
@@ -795,7 +900,1808 @@
     },
     {
       "num": 100,
-      "sellerId": "",
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 101,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 102,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 103,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 104,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 105,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 106,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 107,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 108,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 109,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 110,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 111,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 112,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 113,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 114,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 115,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 116,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 117,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 118,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 119,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 120,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 121,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 122,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 123,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 124,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 125,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 126,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 127,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 128,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 129,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 130,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 131,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 132,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 133,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 134,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 135,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 136,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 137,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 138,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 139,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 140,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 141,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 142,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 143,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 144,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 145,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 146,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 147,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 148,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 149,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 150,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 151,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 152,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 153,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 154,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 155,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 156,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 157,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 158,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 159,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 160,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 161,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 162,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 163,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 164,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 165,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 166,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 167,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 168,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 169,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 170,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 171,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 172,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 173,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 174,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 175,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 176,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 177,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 178,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 179,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 180,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 181,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 182,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 183,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 184,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 185,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 186,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 187,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 188,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 189,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 190,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 191,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 192,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 193,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 194,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 195,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 196,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 197,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 198,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 199,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 200,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 201,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 202,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 203,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 204,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 205,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 206,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 207,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 208,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 209,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 210,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 211,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 212,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 213,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 214,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 215,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 216,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 217,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 218,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 219,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 220,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 221,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 222,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 223,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 224,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 225,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 226,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 227,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 228,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 229,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 230,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 231,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 232,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 233,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 234,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 235,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 236,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 237,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 238,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 239,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 240,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 241,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 242,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 243,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 244,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 245,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 246,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 247,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 248,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 249,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 250,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 251,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 252,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 253,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 254,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 255,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 256,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 257,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 258,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 259,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 260,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 261,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 262,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 263,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 264,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 265,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 266,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 267,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 268,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 269,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 270,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 271,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 272,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 273,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 274,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 275,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 276,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 277,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 278,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 279,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 280,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 281,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 282,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 283,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 284,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 285,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 286,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 287,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 288,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 289,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 290,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 291,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 292,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 293,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 294,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 295,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 296,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 297,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 298,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 299,
+      "sellerId": "1785974048668",
+      "player": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 300,
+      "sellerId": "1785974048668",
+      "player": "",
       "buyer": "",
       "phone": "",
       "status": "Asignado",
