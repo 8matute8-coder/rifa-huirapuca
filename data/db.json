@@ -1,0 +1,805 @@
+{
+  "sellers": [],
+  "tickets": [
+    {
+      "num": 1,
+      "sellerId": "",
+      "buyer": "Carlos Gómez",
+      "phone": "3865441122",
+      "status": "Vendido",
+      "payment": "Pagado"
+    },
+    {
+      "num": 2,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 3,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 4,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 5,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 6,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 7,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 8,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 9,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 10,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 11,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 12,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 13,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 14,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 15,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 16,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 17,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 18,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 19,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 20,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 21,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 22,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 23,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 24,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 25,
+      "sellerId": "",
+      "buyer": "Mariana Silva",
+      "phone": "3865998877",
+      "status": "Vendido",
+      "payment": "Pagado"
+    },
+    {
+      "num": 26,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 27,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 28,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 29,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 30,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 31,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 32,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 33,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 34,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 35,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 36,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 37,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 38,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 39,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 40,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 41,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 42,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 43,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 44,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 45,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 46,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 47,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 48,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 49,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 50,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 51,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 52,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 53,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 54,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 55,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 56,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 57,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 58,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 59,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 60,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 61,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 62,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 63,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 64,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 65,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 66,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 67,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 68,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 69,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 70,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 71,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 72,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 73,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 74,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 75,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 76,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 77,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 78,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 79,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 80,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 81,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 82,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 83,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 84,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 85,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 86,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 87,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 88,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 89,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 90,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 91,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 92,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 93,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 94,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 95,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 96,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 97,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 98,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 99,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    },
+    {
+      "num": 100,
+      "sellerId": "",
+      "buyer": "",
+      "phone": "",
+      "status": "Asignado",
+      "payment": "Pendiente"
+    }
+  ]
+}
