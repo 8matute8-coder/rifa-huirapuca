@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión y Distribución de Rifa - Club Huirapuca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #15803d;
+            --primary-dark: #166534;
+            --secondary: #9f1239;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* LOGIN SCREEN OVERLAY */
+        #auth-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .auth-card {
+            background: rgba(30, 41, 59, 0.95);
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 40px 32px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .auth-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 16px auto;
+        }
+
+        .auth-card h2 {
+            margin: 0 0 6px 0;
+            color: white;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .auth-card p {
+            margin: 0 0 24px 0;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .auth-input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1.5px solid #475569;
+            background: #0f172a;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            outline: none;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .auth-input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-login:hover {
+            background: var(--primary-dark);
+        }
+
+        .auth-error {
+            color: #f87171;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 12px;
+            display: none;
+        }
+
+        /* HEADER */
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 16px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--primary);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+        }
+
+        .brand-title h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-title p {
+            margin: 1px 0 0 0;
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .github-sync-badge {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #38bdf8;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-header {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 12.5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-header:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-danger {
+            background: var(--secondary);
+        }
+
+        .btn-danger:hover {
+            background: #881337;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1280px;
+            margin: 24px auto;
+            padding: 0 20px;
+        }
+
+        /* CARD SECTIONS */
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            padding: 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 24px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-title h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .card-title p {
+            margin: 3px 0 0 0;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* GRID FOR MANAGERS */
+        .managers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .manager-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .manager-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .manager-name {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .manager-division {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .manager-stats {
+            margin: 14px 0;
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-item label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+
+        .stat-item span {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        /* TABLES */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        th {
+            background: #f8fafc;
+            color: #475569;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            color: #334155;
+            font-weight: 600;
+        }
+
+        tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        /* BADGES */
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .badge-available { background: #e0f2fe; color: #0369a1; }
+        .badge-assigned { background: #fef3c7; color: #b45309; }
+        .badge-sold { background: #dcfce7; color: #15803d; }
+        .badge-pending { background: #fee2e2; color: #b91c1c; }
+
+        /* INPUTS & BUTTONS */
+        .search-input {
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 13px;
+            width: 240px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-action {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-action:hover {
+            background: #f1f5f9;
+        }
+
+        /* MODALS */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 16px;
+            max-width: 480px;
+            width: 100%;
+            padding: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .modal-header h4 {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 14px;
+        }
+
+        .form-group label {
+            font-size: 11px;
+            font-weight: 800;
+            color: #475569;
+            text-transform: uppercase;
+        }
+
+        .form-group input, .form-group select {
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
+            outline: none;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* MOBILE FIRST RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                padding: 14px 16px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .brand-container {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+                gap: 8px;
+            }
+
+            .header-actions button {
+                flex: 1;
+                justify-content: center;
+                min-height: 40px;
+                font-size: 11.5px;
+                padding: 6px 10px;
+            }
+
+            .github-sync-badge {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .container {
+                padding: 12px;
+                margin: 12px auto;
+            }
+
+            .card {
+                padding: 16px;
+                border-radius: 12px;
+                margin-bottom: 16px;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 14px;
+            }
+
+            .card-header > div {
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .card-header button, .card-header input {
+                width: 100% !important;
+                min-height: 42px;
+            }
+
+            .managers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                white-space: nowrap;
+            }
+
+            .btn-action {
+                padding: 8px 10px;
+                min-height: 36px;
+            }
+
+            .modal-card {
+                padding: 18px;
+                max-width: 100%;
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- AUTH OVERLAY -->
+    <div id="auth-overlay">
+        <div class="auth-card">
+            <svg class="auth-logo" viewBox="0 0 100 100">
+                <polygon points="50,2 98,50 50,98 2,50" fill="#15803d" stroke="#ffffff" stroke-width="3"/>
+                <text x="50" y="66" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle">H</text>
+            </svg>
+            <h2>Acceso Restringido</h2>
+            <p>Ingrese la contraseña de administración para acceder al sistema.</p>
+            <form onsubmit="handleLogin(event)">
+                <input type="password" id="auth-password" class="auth-input" placeholder="Contraseña de acceso" autofocus required>
+                <button type="submit" class="btn-login">🔒 Ingresar</button>
+                <div id="auth-error" class="auth-error">⚠️ Contraseña incorrecta.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="brand-container">
+            <svg class="brand-logo" viewBox="0 0 100 100">
+                <polygon points="50,2 98,50 50,98 2,50" fill="#15803d" stroke="#ffffff" stroke-width="3"/>
+                <text x="50" y="66" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle">H</text>
+            </svg>
+            <div class="brand-title">
+                <h1>Rifa Club Huirapuca</h1>
+                <p>Asignación & Control de Boletos</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="github-sync-badge" id="gh-status-badge">
+                <span id="gh-dot" style="width:8px; height:8px; background:#38bdf8; border-radius:50%; display:inline-block"></span>
+                <span id="gh-status-text">Base GitHub: Cargando...</span>
+            </div>
+            <button class="btn-header" onclick="syncWithGitHubAPI()">☁️ Publicar en GitHub</button>
+            <button class="btn-header" style="background:#0284c7" onclick="exportCSV()">📊 Exportar Excel</button>
+            <button class="btn-header btn-danger" onclick="logout()">🔒 Salir</button>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- SECCIÓN 1: MANAGERS / DIVISIONES -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <h2>🏉 Managers & Divisiones</h2>
+                    <p>Crea el Manager de cada división (ej. M14) y asígnale su lote de boletos para distribuir a sus jugadores.</p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button class="btn-header" onclick="openBatchModal()">⚙️ Cantidad Total Boletos</button>
+                    <button class="btn-header" onclick="openAddManagerModal()">+ Agregar Manager / División</button>
+                </div>
+            </div>
+
+            <div class="managers-grid" id="managers-container">
+                <!-- Injected JS -->
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: PADRÓN GENERAL Y REGISTRO DE COMPRADORES -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <h2>🎟️ Padrón General de Boletos</h2>
+                    <p>Registra al jugador responsable, comprador y estado de pago de cada bono.</p>
+                </div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <input type="text" id="ticket-search" class="search-input" placeholder="🔍 Buscar por Nº, Jugador, Comprador..." oninput="renderTickets()">
+                    <button class="btn-action" style="background:#fee2e2; color:#b91c1c; border-color:#fca5a5" onclick="resetEverythingToZero()">🧹 Reiniciar Todo a 0</button>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nº Bono</th>
+                            <th>Estado</th>
+                            <th>Manager / División</th>
+                            <th>Jugador Responsable</th>
+                            <th>Comprador</th>
+                            <th>Teléfono Comprador</th>
+                            <th>Pago ($10.000)</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tickets-table-body">
+                        <!-- Injected JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL: ADD / EDIT MANAGER -->
+    <div id="modal-manager" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4 id="manager-modal-title">Agregar Manager / División</h4>
+                <button class="btn-action" onclick="closeModal('modal-manager')">✕</button>
+            </div>
+            <form onsubmit="saveManager(event)">
+                <input type="hidden" id="manager-id">
+                <div class="form-group">
+                    <label>Nombre del Manager</label>
+                    <input type="text" id="manager-name" required placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label>División / Categoría</label>
+                    <input type="text" id="manager-category" required placeholder="Ej: M14 Rugby">
+                </div>
+                <div class="form-group">
+                    <label>Cantidad de Jugadores en la División</label>
+                    <input type="number" id="manager-players-count" required min="1" max="500" placeholder="Ej: 10" oninput="updateManagerCalcHint()">
+                </div>
+                <div id="manager-calc-hint" style="margin-bottom:14px; font-size:12px;"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-action" onclick="closeModal('modal-manager')">Cancelar</button>
+                    <button type="submit" class="btn-header">Guardar Manager y Generar Rifas</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: ASSIGN TICKETS TO PLAYER -->
+    <div id="modal-player" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4>Asignar Boletos a Jugador</h4>
+                <button class="btn-action" onclick="closeModal('modal-player')">✕</button>
+            </div>
+            <form onsubmit="savePlayerAssignment(event)">
+                <input type="hidden" id="player-manager-id">
+                <div class="form-group">
+                    <label>Manager / División Asignada</label>
+                    <input type="text" id="player-manager-name" readonly style="background:#f1f5f9; color:#64748b">
+                </div>
+                <div class="form-group">
+                    <label>Nombre y Apellido del Jugador</label>
+                    <input type="text" id="player-name" required placeholder="Ej: Pedro González">
+                </div>
+                <div id="player-free-hint" style="margin-bottom:12px; font-size:11.5px;"></div>
+                <div class="form-group">
+                    <label>Rango de Boletos para este Jugador</label>
+                    <div style="display:flex; gap:10px;">
+                        <input type="number" id="player-range-start" required placeholder="Desde (ej: 1)" min="1" oninput="updatePlayerCalcHint()">
+                        <input type="number" id="player-range-end" required placeholder="Hasta (ej: 32)" min="1" oninput="updatePlayerCalcHint()">
+                    </div>
+                    <div id="player-count-badge" style="margin-top:6px; font-size:12px; font-weight:700;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-action" onclick="closeModal('modal-player')">Cancelar</button>
+                    <button type="submit" class="btn-header">Asignar a Jugador</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: EDIT TICKET -->
+    <div id="modal-ticket" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4 id="ticket-modal-title">Editar Bono Nº 000001</h4>
+                <button class="btn-action" onclick="closeModal('modal-ticket')">✕</button>
+            </div>
+            <form onsubmit="saveTicket(event)">
+                <input type="hidden" id="edit-ticket-num">
+                <div class="form-group">
+                    <label>Manager / División</label>
+                    <select id="edit-ticket-manager">
+                        <!-- Options injected -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Jugador Responsable</label>
+                    <input type="text" id="edit-ticket-player" placeholder="Nombre del jugador de la división">
+                </div>
+                <div class="form-group">
+                    <label>Nombre del Comprador</label>
+                    <input type="text" id="edit-ticket-buyer" placeholder="Nombre y Apellido del comprador">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono del Comprador</label>
+                    <input type="text" id="edit-ticket-phone" placeholder="Ej: 3865 123456">
+                </div>
+                <div class="form-group">
+                    <label>Estado del Boleto</label>
+                    <select id="edit-ticket-status">
+                        <option value="Disponible">Disponible</option>
+                        <option value="Asignado">Asignado</option>
+                        <option value="Vendido">Vendido</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Estado del Pago ($10.000)</label>
+                    <select id="edit-ticket-payment">
+                        <option value="Pendiente">Pendiente de Pago</option>
+                        <option value="Pagado">Pagado / Rendido</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-action" onclick="closeModal('modal-ticket')">Cancelar</button>
+                    <button type="submit" class="btn-header">Actualizar Bono</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: SET TOTAL TICKETS BATCH -->
+    <div id="modal-batch" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4>Definir Cantidad Total de Boletos</h4>
+                <button class="btn-action" onclick="closeModal('modal-batch')">✕</button>
+            </div>
+            <form onsubmit="saveBatchTickets(event)">
+                <div class="form-group">
+                    <label>Cantidad Total de Boletos del Padrón</label>
+                    <input type="number" id="batch-total-count" required min="1" max="10000" placeholder="Ej: 500">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-action" onclick="closeModal('modal-batch')">Cancelar</button>
+                    <button type="submit" class="btn-header" style="background:#0284c7">Generar / Ajustar Boletos</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT APPLICATION LOGIC -->
+    <script>
+        const AUTH_PASS = 'Eric2026';
+
+        function checkAuth() {
+            if (sessionStorage.getItem('huira_auth') === 'true') {
+                document.getElementById('auth-overlay').style.display = 'none';
+            } else {
+                document.getElementById('auth-overlay').style.display = 'flex';
+            }
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const input = document.getElementById('auth-password').value;
+            if (input === AUTH_PASS) {
+                sessionStorage.setItem('huira_auth', 'true');
+                document.getElementById('auth-overlay').style.display = 'none';
+                document.getElementById('auth-error').style.display = 'none';
+            } else {
+                document.getElementById('auth-error').style.display = 'block';
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem('huira_auth');
+            location.reload();
+        }
+
+        let state = {
+            sellers: [],
+            tickets: []
+        };
+
+        let ghConfig = JSON.parse(localStorage.getItem('huira_gh_config')) || {
+            user: '8matute8-coder',
+            repo: 'rifa-huirapuca',
+            token: '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'
+        };
+
+        // LOAD DATA FROM GITHUB DATA/DB.JSON FIRST
+        async function loadInitialData() {
+            try {
+                const res = await fetch('data/db.json?t=' + Date.now());
+                if (res.ok) {
+                    const db = await res.json();
+                    if (db.sellers && db.tickets) {
+                        state = db;
+                        updateSyncBadge('✅ Base GitHub Cargada', '#4ade80');
+                        saveDataLocal();
+                        return;
+                    }
+                }
+            } catch(e) {
+                console.log('Using local storage fallback:', e);
+            }
+
+            state.sellers = JSON.parse(localStorage.getItem('huira_sellers')) || [];
+            state.tickets = JSON.parse(localStorage.getItem('huira_tickets')) || [];
+            updateSyncBadge('Modo Local', '#facc15');
+            saveDataLocal();
+        }
+
+        function updateSyncBadge(text, color) {
+            document.getElementById('gh-status-text').innerText = text;
+            document.getElementById('gh-dot').style.backgroundColor = color;
+        }
+
+        function saveDataLocal() {
+            localStorage.setItem('huira_sellers', JSON.stringify(state.sellers));
+            localStorage.setItem('huira_tickets', JSON.stringify(state.tickets));
+            render();
+        }
+
+        // SAVE & SYNC DIRECTLY TO GITHUB REPOSITORY VIA API
+        async function syncWithGitHubAPI() {
+            updateSyncBadge('Publicando en GitHub...', '#fbbf24');
+            const url = `https://api.github.com/repos/${ghConfig.user}/${ghConfig.repo}/contents/data/db.json`;
+            const authHeader = ghConfig.token.startsWith('github_pat_') ? `Bearer ${ghConfig.token}` : `token ${ghConfig.token}`;
+            const reqHeaders = {
+                'Authorization': authHeader,
+                'Accept': 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28'
+            };
+
+            try {
+                let sha = '';
+                const getRes = await fetch(url, { headers: reqHeaders });
+                if (getRes.ok) {
+                    const fileData = await getRes.json();
+                    sha = fileData.sha;
+                }
+
+                const jsonStr = JSON.stringify(state, null, 2);
+                const bytes = new TextEncoder().encode(jsonStr);
+                let binary = '';
+                for (let b of bytes) binary += String.fromCharCode(b);
+                const contentB64 = btoa(binary);
+
+                const putRes = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        ...reqHeaders,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `Actualización de padrón de rifa [${new Date().toLocaleTimeString()}]`,
+                        content: contentB64,
+                        sha: sha || undefined
+                    })
+                });
+
+                if (putRes.ok) {
+                    updateSyncBadge('✅ Publicado en GitHub', '#4ade80');
+                    alert('🎉 ¡Base de datos sincronizada y publicada en GitHub con éxito!');
+                } else {
+                    const errData = await putRes.json();
+                    updateSyncBadge('⚠️ Error en GitHub Sync', '#f87171');
+                    alert(`Error al publicar en GitHub: ${errData.message}`);
+                }
+            } catch(err) {
+                console.error(err);
+                updateSyncBadge('⚠️ Error de Red', '#f87171');
+                alert('Ocurrió un error al conectar con la API de GitHub.');
+            }
+        }
+
+        function formatNum(num) {
+            return String(num).padStart(6, '0');
+        }
+
+        function render() {
+            renderManagers();
+            renderTickets();
+        }
+
+        function renderManagers() {
+            const container = document.getElementById('managers-container');
+            container.innerHTML = '';
+
+            if (state.sellers.length === 0) {
+                container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:20px; color:#94a3b8; font-size:13px;">No hay Managers o Divisiones registradas. Haz clic en "+ Agregar Manager / División".</div>';
+                return;
+            }
+
+            state.sellers.forEach(s => {
+                const assignedTickets = state.tickets.filter(t => t.sellerId === s.id);
+                const soldTickets = assignedTickets.filter(t => t.status === 'Vendido');
+                const paidTickets = assignedTickets.filter(t => t.payment === 'Pagado');
+                const revenue = paidTickets.length * 10000;
+
+                const div = document.createElement('div');
+                div.className = 'manager-box';
+                div.innerHTML = `
+                    <div class="manager-box-header">
+                        <div>
+                            <div class="manager-name">${s.name}</div>
+                            <div class="manager-division">${s.category || 'Sin División'}</div>
+                        </div>
+                        <button class="btn-action" style="color:#b91c1c" onclick="deleteManager('${s.id}')">🗑️</button>
+                    </div>
+
+                    <div class="manager-stats">
+                        <div class="stat-item">
+                            <label>Asignados</label>
+                            <span>${assignedTickets.length}</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Vendidos</label>
+                            <span style="color:#15803d">${soldTickets.length}</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Recaudado</label>
+                            <span style="color:#0284c7">$ ${revenue.toLocaleString('es-AR')}</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-action" style="width:100%; background:#f0fdf4; color:#15803d; border-color:#bbf7d0" onclick="openPlayerModal('${s.id}')">+ Asignar a Jugador</button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function renderTickets() {
+            const tbody = document.getElementById('tickets-table-body');
+            const search = document.getElementById('ticket-search').value.toLowerCase();
+            tbody.innerHTML = '';
+
+            const filtered = state.tickets.filter(t => {
+                const seller = state.sellers.find(s => s.id === t.sellerId);
+                const managerStr = seller ? (seller.name + ' ' + seller.category).toLowerCase() : '';
+                const playerStr = (t.player || '').toLowerCase();
+                const buyerStr = (t.buyer || '').toLowerCase();
+                const numStr = formatNum(t.num);
+                return numStr.includes(search) || managerStr.includes(search) || playerStr.includes(search) || buyerStr.includes(search);
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; color:#94a3b8; padding:24px;">No hay boletos generados o que coincidan con la búsqueda. Haz clic en "⚙️ Cantidad Total Boletos" para definir la lista.</td></tr>';
+                return;
+            }
+
+            filtered.forEach(t => {
+                const seller = state.sellers.find(s => s.id === t.sellerId);
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>Nº ${formatNum(t.num)}</strong></td>
+                    <td><span class="badge ${t.status === 'Vendido' ? 'badge-sold' : (t.status === 'Asignado' ? 'badge-assigned' : 'badge-available')}">${t.status}</span></td>
+                    <td>${seller ? `<strong>${seller.category || 'General'}</strong> (${seller.name})` : '<span style="color:#94a3b8">Sin Asignar</span>'}</td>
+                    <td>${t.player ? `🏃 ${t.player}` : '-'}</td>
+                    <td>${t.buyer ? `<strong>${t.buyer}</strong>` : '-'}</td>
+                    <td>${t.phone || '-'}</td>
+                    <td>
+                        <span class="badge ${t.payment === 'Pagado' ? 'badge-sold' : 'badge-pending'}" 
+                              style="cursor:pointer; user-select:none; transition:transform 0.1s;" 
+                              title="Haga clic para cambiar a ${t.payment === 'Pagado' ? 'Pendiente' : 'Pagado / Rendido'}" 
+                              onclick="togglePaymentStatus(${t.num})">
+                            ${t.payment === 'Pagado' ? '✅ RENDIDO' : '⏳ PENDIENTE'}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="btn-action" style="color:#15803d; font-weight:700" onclick="quickRegisterBuyer(${t.num})">👤 Comprador</button>
+                        <button class="btn-action" onclick="openEditTicketModal(${t.num})">✏️ Editar</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function togglePaymentStatus(num) {
+            const ticket = state.tickets.find(t => t.num === num);
+            if (!ticket) return;
+
+            if (ticket.payment === 'Pagado') {
+                ticket.payment = 'Pendiente';
+            } else {
+                ticket.payment = 'Pagado';
+                if (ticket.status === 'Disponible') ticket.status = 'Vendido';
+            }
+            saveDataLocal();
+        }
+
+        function quickRegisterBuyer(num) {
+            const ticket = state.tickets.find(t => t.num === num);
+            if (!ticket) return;
+
+            const buyerName = prompt(`Bono Nº ${formatNum(num)}\nNombre y Apellido del Comprador:`, ticket.buyer || '');
+            if (buyerName === null) return;
+
+            const phone = prompt(`Bono Nº ${formatNum(num)}\nTeléfono del Comprador:`, ticket.phone || '');
+            if (phone === null) return;
+
+            ticket.buyer = buyerName.trim();
+            ticket.phone = phone.trim();
+
+            if (ticket.buyer) {
+                if (ticket.status === 'Disponible') ticket.status = 'Vendido';
+                if (ticket.payment !== 'Pagado' && confirm(`¿Marcar también la rendición como PAGADO / RENDIDO para el Bono Nº ${formatNum(num)}?`)) {
+                    ticket.payment = 'Pagado';
+                }
+            }
+            saveDataLocal();
+        }
+
+        // MANAGERS MODAL ACTIONS
+        function updateManagerCalcHint() {
+            const count = parseInt(document.getElementById('manager-players-count').value) || 0;
+            const hintEl = document.getElementById('manager-calc-hint');
+            if (count > 0) {
+                const totalRifas = count * 32;
+                hintEl.innerHTML = `
+                    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px; color:#166534">
+                        <strong>⚡ ${count} jugadores × 32 rifas = ${totalRifas} rifas totales</strong><br>
+                        <span>Se generará un lote de ${totalRifas} rifas asignadas a esta división.</span>
+                    </div>
+                `;
+            } else {
+                hintEl.innerHTML = '';
+            }
+        }
+
+        function openAddManagerModal() {
+            document.getElementById('manager-id').value = '';
+            document.getElementById('manager-name').value = '';
+            document.getElementById('manager-category').value = '';
+            document.getElementById('manager-players-count').value = '';
+            document.getElementById('manager-calc-hint').innerHTML = '';
+            document.getElementById('manager-modal-title').innerText = 'Agregar Manager / División';
+            document.getElementById('modal-manager').style.display = 'flex';
+        }
+
+        function saveManager(e) {
+            e.preventDefault();
+            const id = document.getElementById('manager-id').value;
+            const name = document.getElementById('manager-name').value.trim();
+            const category = document.getElementById('manager-category').value.trim();
+            const playersCount = parseInt(document.getElementById('manager-players-count').value) || 0;
+
+            let managerId = id || String(Date.now());
+            if (!id) {
+                state.sellers.push({ id: managerId, name, category });
+            } else {
+                const existing = state.sellers.find(s => s.id === id);
+                if (existing) { existing.name = name; existing.category = category; }
+            }
+
+            if (playersCount > 0) {
+                const totalNeeded = playersCount * 32;
+
+                // 1. Re-use unassigned free tickets in the pool first
+                let unassignedTickets = state.tickets.filter(t => !t.sellerId).sort((a,b) => a.num - b.num);
+                let assignedCount = 0;
+
+                for (let i = 0; i < unassignedTickets.length && assignedCount < totalNeeded; i++) {
+                    unassignedTickets[i].sellerId = managerId;
+                    unassignedTickets[i].player = '';
+                    unassignedTickets[i].status = 'Asignado';
+                    assignedCount++;
+                }
+
+                // 2. If more tickets are needed, generate new ones starting after currentMax
+                if (assignedCount < totalNeeded) {
+                    const remainingToCreate = totalNeeded - assignedCount;
+                    let currentMax = state.tickets.reduce((max, t) => t.num > max ? t.num : max, 0);
+
+                    for (let i = 1; i <= remainingToCreate; i++) {
+                        currentMax++;
+                        state.tickets.push({
+                            num: currentMax,
+                            sellerId: managerId,
+                            player: '',
+                            buyer: '',
+                            phone: '',
+                            status: 'Asignado',
+                            payment: 'Pendiente'
+                        });
+                    }
+                }
+            }
+
+            state.tickets.sort((a,b) => a.num - b.num);
+            closeModal('modal-manager');
+            saveDataLocal();
+            alert(`🎉 ¡Manager ${name} (${category}) guardado!\nSe asignaron ${playersCount * 32} rifas (${playersCount} jugadores × 32 rifas) reutilizando los boletos libres del padrón.`);
+        }
+
+        function deleteManager(id) {
+            if (confirm('¿Desea eliminar este Manager? Sus boletos quedarán libres y serán reutilizados automáticamente por el próximo Manager.')) {
+                state.sellers = state.sellers.filter(s => s.id !== id);
+                state.tickets.forEach(t => {
+                    if (t.sellerId === id) {
+                        t.sellerId = '';
+                        t.player = '';
+                        t.buyer = '';
+                        t.phone = '';
+                        t.status = 'Disponible';
+                        t.payment = 'Pendiente';
+                    }
+                });
+                saveDataLocal();
+            }
+        }
+
+        // PLAYER ASSIGNMENT MODAL (AUTO 32 RIFAS)
+        function openPlayerModal(managerId) {
+            const manager = state.sellers.find(s => s.id === managerId);
+            if (!manager) return;
+
+            document.getElementById('player-manager-id').value = manager.id;
+            document.getElementById('player-manager-name').value = `${manager.category || 'División'} - ${manager.name}`;
+            document.getElementById('player-name').value = '';
+
+            // Check free tickets assigned to this manager but without player
+            let freeTickets = state.tickets.filter(t => t.sellerId === managerId && !t.player).sort((a,b) => a.num - b.num);
+            const hintEl = document.getElementById('player-free-hint');
+
+            if (freeTickets.length >= 32) {
+                const minFree = freeTickets[0].num;
+                const endFree = freeTickets[31].num;
+
+                hintEl.innerHTML = `
+                    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px; color:#166534">
+                        <strong>⚡ Asignación automática de 32 rifas</strong><br>
+                        <span>Se tomarán los números libres de esta división: <strong>Nº ${minFree} al Nº ${endFree}</strong>.</span>
+                    </div>
+                `;
+                document.getElementById('player-range-start').value = minFree;
+                document.getElementById('player-range-end').value = endFree;
+            } else if (freeTickets.length > 0) {
+                const minFree = freeTickets[0].num;
+                const endFree = freeTickets[freeTickets.length - 1].num;
+
+                hintEl.innerHTML = `
+                    <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px; color:#166534">
+                        <strong>⚡ Se asignarán las ${freeTickets.length} rifas libres restantes</strong><br>
+                        <span>Números disponibles: <strong>Nº ${minFree} al Nº ${endFree}</strong>.</span>
+                    </div>
+                `;
+                document.getElementById('player-range-start').value = minFree;
+                document.getElementById('player-range-end').value = endFree;
+            } else {
+                // Look for unassigned pool tickets
+                const poolFree = state.tickets.filter(t => !t.sellerId && !t.player).sort((a,b) => a.num - b.num);
+                if (poolFree.length > 0) {
+                    const countToTake = Math.min(32, poolFree.length);
+                    const minFree = poolFree[0].num;
+                    const endFree = poolFree[countToTake - 1].num;
+
+                    hintEl.innerHTML = `
+                        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px; color:#166534">
+                            <strong>⚡ Asignación automática de ${countToTake} rifas del padrón general</strong><br>
+                            <span>Números libres asignados: <strong>Nº ${minFree} al Nº ${endFree}</strong>.</span>
+                        </div>
+                    `;
+                    document.getElementById('player-range-start').value = minFree;
+                    document.getElementById('player-range-end').value = endFree;
+                } else {
+                    hintEl.innerHTML = `
+                        <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:10px; color:#991b1b">
+                            <strong>⚠️ No quedan boletos libres disponibles en el padrón.</strong>
+                        </div>
+                    `;
+                    document.getElementById('player-range-start').value = '';
+                    document.getElementById('player-range-end').value = '';
+                }
+            }
+
+            updatePlayerCalcHint();
+            document.getElementById('modal-player').style.display = 'flex';
+        }
+
+        function updatePlayerCalcHint() {
+            const start = parseInt(document.getElementById('player-range-start').value);
+            const end = parseInt(document.getElementById('player-range-end').value);
+            const badge = document.getElementById('player-count-badge');
+
+            if (start && end && end >= start) {
+                const count = end - start + 1;
+                badge.innerHTML = `🎟️ Rifas a asignar a este jugador: <span style="background:#dcfce7; color:#15803d; padding:3px 10px; border-radius:12px; font-weight:800">${count} rifas</span> (Nº ${formatNum(start)} al Nº ${formatNum(end)})`;
+            } else if (start && end && end < start) {
+                badge.innerHTML = `<span style="color:#b91c1c">⚠️ El número 'Hasta' debe ser mayor o igual a 'Desde'.</span>`;
+            } else {
+                badge.innerHTML = '';
+            }
+        }
+
+        function savePlayerAssignment(e) {
+            e.preventDefault();
+            const managerId = document.getElementById('player-manager-id').value;
+            const playerName = document.getElementById('player-name').value.trim();
+            const startRange = parseInt(document.getElementById('player-range-start').value);
+            const endRange = parseInt(document.getElementById('player-range-end').value);
+
+            if (!startRange || !endRange || startRange > endRange) return;
+
+            for (let i = startRange; i <= endRange; i++) {
+                let ticket = state.tickets.find(t => t.num === i);
+                if (ticket) {
+                    ticket.sellerId = managerId;
+                    ticket.player = playerName;
+                    if (ticket.status === 'Disponible') ticket.status = 'Asignado';
+                } else {
+                    state.tickets.push({
+                        num: i,
+                        sellerId: managerId,
+                        player: playerName,
+                        buyer: '',
+                        phone: '',
+                        status: 'Asignado',
+                        payment: 'Pendiente'
+                    });
+                }
+            }
+
+            state.tickets.sort((a,b) => a.num - b.num);
+            closeModal('modal-player');
+            saveDataLocal();
+            alert(`✅ Boletos Nº ${startRange} al Nº ${endRange} asignados a ${playerName}.`);
+        }
+
+        // TICKET EDIT MODAL
+        function openEditTicketModal(num) {
+            const ticket = state.tickets.find(t => t.num === num);
+            if (!ticket) return;
+
+            document.getElementById('edit-ticket-num').value = ticket.num;
+            document.getElementById('ticket-modal-title').innerText = `Editar Bono Nº ${formatNum(ticket.num)}`;
+            document.getElementById('edit-ticket-player').value = ticket.player || '';
+            document.getElementById('edit-ticket-buyer').value = ticket.buyer || '';
+            document.getElementById('edit-ticket-phone').value = ticket.phone || '';
+            document.getElementById('edit-ticket-status').value = ticket.status;
+            document.getElementById('edit-ticket-payment').value = ticket.payment;
+
+            const managerSelect = document.getElementById('edit-ticket-manager');
+            managerSelect.innerHTML = '<option value="">-- Sin Manager / División --</option>';
+            state.sellers.forEach(s => {
+                const sel = s.id === ticket.sellerId ? 'selected' : '';
+                managerSelect.innerHTML += `<option value="${s.id}" ${sel}>${s.category || 'División'} (${s.name})</option>`;
+            });
+
+            document.getElementById('modal-ticket').style.display = 'flex';
+        }
+
+        function saveTicket(e) {
+            e.preventDefault();
+            const num = parseInt(document.getElementById('edit-ticket-num').value);
+            const ticket = state.tickets.find(t => t.num === num);
+            if (!ticket) return;
+
+            ticket.sellerId = document.getElementById('edit-ticket-manager').value;
+            ticket.player = document.getElementById('edit-ticket-player').value.trim();
+            ticket.buyer = document.getElementById('edit-ticket-buyer').value.trim();
+            ticket.phone = document.getElementById('edit-ticket-phone').value.trim();
+            ticket.status = document.getElementById('edit-ticket-status').value;
+            ticket.payment = document.getElementById('edit-ticket-payment').value;
+
+            if (ticket.buyer && ticket.status === 'Disponible') ticket.status = 'Vendido';
+
+            closeModal('modal-ticket');
+            saveDataLocal();
+        }
+
+        // BATCH TICKETS MODAL
+        function openBatchModal() {
+            document.getElementById('batch-total-count').value = state.tickets.length > 0 ? state.tickets.length : 500;
+            document.getElementById('modal-batch').style.display = 'flex';
+        }
+
+        function saveBatchTickets(e) {
+            e.preventDefault();
+            const count = parseInt(document.getElementById('batch-total-count').value);
+            if (!count || count < 1) return;
+
+            if (count > state.tickets.length) {
+                const max = state.tickets.reduce((m, t) => t.num > m ? t.num : m, 0);
+                for (let i = max + 1; i <= count; i++) {
+                    state.tickets.push({
+                        num: i,
+                        sellerId: '',
+                        player: '',
+                        buyer: '',
+                        phone: '',
+                        status: 'Disponible',
+                        payment: 'Pendiente'
+                    });
+                }
+            } else if (count < state.tickets.length) {
+                if (confirm(`¿Desea recortar los boletos superiores al Nº ${count}?`)) {
+                    state.tickets = state.tickets.filter(t => t.num <= count);
+                } else return;
+            }
+
+            state.tickets.sort((a,b) => a.num - b.num);
+            closeModal('modal-batch');
+            saveDataLocal();
+        }
+
+        function resetEverythingToZero() {
+            if (confirm('🚨 ¿Desea vaciar y reiniciar el padrón a 0 (0 boletos y 0 vendedores)?')) {
+                localStorage.removeItem('huira_sellers');
+                localStorage.removeItem('huira_tickets');
+                state = { sellers: [], tickets: [] };
+                saveDataLocal();
+                alert('🧹 Memoria vaciada a 0.');
+            }
+        }
+
+        function exportCSV() {
+            let csvContent = "\uFEFF";
+            csvContent += "Nº Bono;Estado;División / Manager;Jugador Responsable;Comprador;Teléfono Comprador;Estado Pago;Valor ($)\n";
+
+            state.tickets.forEach(t => {
+                const seller = state.sellers.find(s => s.id === t.sellerId);
+                const managerStr = seller ? `${seller.category || 'General'} (${seller.name})` : "Sin Asignar";
+                const playerStr = t.player || "-";
+                const buyerStr = t.buyer || "-";
+                const phoneStr = t.phone || "-";
+                const numStr = formatNum(t.num);
+
+                csvContent += `"${numStr}";"${t.status}";"${managerStr}";"${playerStr}";"${buyerStr}";"${phoneStr}";"${t.payment}";"10000"\n`;
+            });
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", `padron_rifa_huirapuca_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        checkAuth();
+        loadInitialData();
+    </script>
+</body>
+</html>
