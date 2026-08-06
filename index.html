@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -578,9 +579,9 @@
         <div class="header-actions">
             <div class="github-sync-badge" id="gh-status-badge">
                 <span id="gh-dot" style="width:8px; height:8px; background:#38bdf8; border-radius:50%; display:inline-block"></span>
-                <span id="gh-status-text">Base GitHub: Cargando...</span>
+                <span id="gh-status-text">Base: Cargando...</span>
             </div>
-            <button class="btn-header" onclick="syncWithGitHubAPI()">☁️ Publicar en GitHub</button>
+            <button class="btn-header" style="background:#ea580c" onclick="openFirebaseModal()">🔥 Conectar Firebase</button>
             <button class="btn-header" style="background:#0284c7" onclick="exportCSV()">📊 Exportar Excel</button>
             <button class="btn-header btn-danger" onclick="logout()">🔒 Salir</button>
         </div>
@@ -756,6 +757,38 @@
         </div>
     </div>
 
+    <!-- MODAL: GITHUB TOKEN CONFIG -->
+    <div id="modal-token" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4>🔑 Configurar Token de GitHub</h4>
+                <button class="btn-action" onclick="closeModal('modal-token')">✕</button>
+            </div>
+            <p style="font-size:12px; color:#64748b; margin-top:-10px">
+                GitHub desactiva automáticamente los tokens si se suben en el código público. Ingresa tu Token personal para guardarlo de forma segura en este navegador.
+            </p>
+            <form onsubmit="saveGitHubToken(event)">
+                <div class="form-group">
+                    <label>Usuario de GitHub</label>
+                    <input type="text" id="gh-user-input" required placeholder="8matute8-coder">
+                </div>
+                <div class="form-group">
+                    <label>Repositorio</label>
+                    <input type="text" id="gh-repo-input" required placeholder="rifa-huirapuca">
+                </div>
+                <div class="form-group">
+                    <label>Token de Acceso (GitHub PAT / Fine-Grained)</label>
+                    <input type="password" id="gh-token-input" required placeholder="github_pat_..." style="font-family:monospace">
+                    <span style="font-size:11px; color:#64748b">Requiere permiso 'Contents: Read and Write' en el repositorio.</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-action" onclick="closeModal('modal-token')">Cancelar</button>
+                    <button type="submit" class="btn-header">Guardar Token</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- MODAL: SET TOTAL TICKETS BATCH -->
     <div id="modal-batch" class="modal-overlay">
         <div class="modal-card">
@@ -775,6 +808,41 @@
             </form>
         </div>
     </div>
+
+    <!-- MODAL: FIREBASE CONFIG -->
+    <div id="modal-firebase" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h4>🔥 Conectar Firebase Firestore</h4>
+                <button class="btn-action" onclick="closeModal('modal-firebase')">✕</button>
+            </div>
+            <p style="font-size:12px; color:#64748b; margin-top:-10px">
+                Ingresa las claves de tu proyecto Firebase (gratis) para sincronización automática en tiempo real sin tokens de GitHub.
+            </p>
+            <form onsubmit="saveFirebaseConfig(event)">
+                <div class="form-group">
+                    <label>apiKey</label>
+                    <input type="text" id="fb-apiKey" required placeholder="AIzaSy...">
+                </div>
+                <div class="form-group">
+                    <label>authDomain</label>
+                    <input type="text" id="fb-authDomain" required placeholder="tu-proyecto.firebaseapp.com">
+                </div>
+                <div class="form-group">
+                    <label>projectId</label>
+                    <input type="text" id="fb-projectId" required placeholder="tu-proyecto">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-action" onclick="closeModal('modal-firebase')">Cancelar</button>
+                    <button type="submit" class="btn-header" style="background:#ea580c">Guardar y Conectar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FIREBASE COMPAT SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
     <!-- SCRIPT APPLICATION LOGIC -->
     <script>
@@ -810,33 +878,82 @@
             tickets: []
         };
 
-        let ghConfig = JSON.parse(localStorage.getItem('huira_gh_config')) || {
-            user: '8matute8-coder',
-            repo: 'rifa-huirapuca',
-            token: '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'
+        let firebaseApp = null;
+        let db = null;
+        let fbConfig = JSON.parse(localStorage.getItem('huira_fb_config')) || {
+            apiKey: "AIzaSyDJkiCalbGDvpTqMwUXM23LqLmJ7wU_O3U",
+            authDomain: "rifa-huirapuca.firebaseapp.com",
+            projectId: "rifa-huirapuca"
         };
 
-        // LOAD DATA FROM GITHUB DATA/DB.JSON FIRST
-        async function loadInitialData() {
-            try {
-                const res = await fetch('data/db.json?t=' + Date.now());
-                if (res.ok) {
-                    const db = await res.json();
-                    if (db.sellers && db.tickets) {
-                        state = db;
-                        updateSyncBadge('✅ Base GitHub Cargada', '#4ade80');
-                        saveDataLocal();
-                        return;
+        if (!fbConfig.apiKey) {
+            fbConfig = {
+                apiKey: "AIzaSyDJkiCalbGDvpTqMwUXM23LqLmJ7wU_O3U",
+                authDomain: "rifa-huirapuca.firebaseapp.com",
+                projectId: "rifa-huirapuca"
+            };
+            localStorage.setItem('huira_fb_config', JSON.stringify(fbConfig));
+        }
+
+        function openFirebaseModal() {
+            if (fbConfig) {
+                document.getElementById('fb-apiKey').value = fbConfig.apiKey || '';
+                document.getElementById('fb-authDomain').value = fbConfig.authDomain || '';
+                document.getElementById('fb-projectId').value = fbConfig.projectId || '';
+            }
+            document.getElementById('modal-firebase').style.display = 'flex';
+        }
+
+        function saveFirebaseConfig(e) {
+            e.preventDefault();
+            fbConfig = {
+                apiKey: document.getElementById('fb-apiKey').value.trim(),
+                authDomain: document.getElementById('fb-authDomain').value.trim(),
+                projectId: document.getElementById('fb-projectId').value.trim()
+            };
+            localStorage.setItem('huira_fb_config', JSON.stringify(fbConfig));
+            closeModal('modal-firebase');
+            alert('🔥 Claves de Firebase guardadas. Conectando...');
+            initFirebase();
+        }
+
+        function initFirebase() {
+            if (fbConfig && fbConfig.apiKey) {
+                try {
+                    if (!firebase.apps.length) {
+                        firebaseApp = firebase.initializeApp(fbConfig);
                     }
+                    db = firebase.firestore();
+                    updateSyncBadge('🔥 Firebase Conectado', '#4ade80');
+
+                    // Realtime Firestore Listener
+                    db.collection('rifa').doc('padron').onSnapshot(doc => {
+                        if (doc.exists) {
+                            state = doc.data();
+                            saveDataLocal(false);
+                        }
+                    }, err => {
+                        console.error("Firestore Listen Error:", err);
+                        updateSyncBadge('⚠️ Error Firebase', '#f87171');
+                    });
+                    return true;
+                } catch(e) {
+                    console.error("Firebase init error:", e);
+                    updateSyncBadge('⚠️ Error Firebase', '#f87171');
                 }
-            } catch(e) {
-                console.log('Using local storage fallback:', e);
+            }
+            return false;
+        }
+
+        async function loadInitialData() {
+            if (initFirebase()) {
+                return; // Managed by Firestore realtime
             }
 
             state.sellers = JSON.parse(localStorage.getItem('huira_sellers')) || [];
             state.tickets = JSON.parse(localStorage.getItem('huira_tickets')) || [];
-            updateSyncBadge('Modo Local', '#facc15');
-            saveDataLocal();
+            updateSyncBadge('Modo Local / Sin Firebase', '#facc15');
+            render();
         }
 
         function updateSyncBadge(text, color) {
@@ -844,14 +961,30 @@
             document.getElementById('gh-dot').style.backgroundColor = color;
         }
 
-        function saveDataLocal() {
+        function saveDataLocal(syncFirebase = true) {
             localStorage.setItem('huira_sellers', JSON.stringify(state.sellers));
             localStorage.setItem('huira_tickets', JSON.stringify(state.tickets));
             render();
+
+            if (syncFirebase && db) {
+                updateSyncBadge('🔥 Guardando...', '#fbbf24');
+                db.collection('rifa').doc('padron').set(state).then(() => {
+                    updateSyncBadge('🔥 Firebase Conectado', '#4ade80');
+                }).catch(err => {
+                    console.error("Error saving to Firebase:", err);
+                    updateSyncBadge('⚠️ Error Firebase', '#f87171');
+                });
+            }
         }
 
         // SAVE & SYNC DIRECTLY TO GITHUB REPOSITORY VIA API
         async function syncWithGitHubAPI() {
+            if (!ghConfig.token) {
+                alert('🔑 Es necesario ingresar tu Token de GitHub para publicar. Por favor ingrésalo a continuación.');
+                openTokenModal();
+                return;
+            }
+
             updateSyncBadge('Publicando en GitHub...', '#fbbf24');
             const url = `https://api.github.com/repos/${ghConfig.user}/${ghConfig.repo}/contents/data/db.json`;
             const authHeader = ghConfig.token.startsWith('github_pat_') ? `Bearer ${ghConfig.token}` : `token ${ghConfig.token}`;
@@ -894,7 +1027,12 @@
                 } else {
                     const errData = await putRes.json();
                     updateSyncBadge('⚠️ Error en GitHub Sync', '#f87171');
-                    alert(`Error al publicar en GitHub: ${errData.message}`);
+                    if (errData.message === 'Bad credentials' || putRes.status === 401) {
+                        alert('⚠️ El Token de GitHub ingresado no es válido o ha sido revocado. Por favor ingresa un Token válido a continuación.');
+                        openTokenModal();
+                    } else {
+                        alert(`Error al publicar en GitHub: ${errData.message}`);
+                    }
                 }
             } catch(err) {
                 console.error(err);
